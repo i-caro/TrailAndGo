@@ -3,11 +3,22 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Modern Webpage</title>
-    <link rel="stylesheet" href="css/style.css">
+    <title>Modern Webpage with Gallery</title>
+    <link rel="stylesheet" href="style/styles.css">
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
 </head>
 <body>
+    <!-- Navbar -->
+    <nav class="navbar" id="navbar">
+        <div class="container">
+            <a href="index.html">Inicio</a>
+            <a href="about.html">Acerca de Nosotros</a>
+            <a href="packages.html">Paquetes de Viajes</a>
+            <a href="reviews.html">Reseñas</a>
+            <a href="contact.html">Más Información</a>
+        </div>
+    </nav>
+
     <!-- Hero Section -->
     <header class="hero">
         <div class="container">
@@ -22,6 +33,11 @@
         <div class="container">
             <h2>About Us</h2>
             <p>We provide top-notch trail adventures tailored to every explorer's needs. Join us for unforgettable experiences!</p>
+            <div class="gallery">
+                <img src="https://via.placeholder.com/300" alt="About Image 1">
+                <img src="https://via.placeholder.com/300" alt="About Image 2">
+                <img src="https://via.placeholder.com/300" alt="About Image 3">
+            </div>
         </div>
     </section>
 
@@ -41,6 +57,11 @@
                 <h3>Eco-Friendly</h3>
                 <p>We prioritize sustainability and respect for nature in every adventure.</p>
             </div>
+            <div class="gallery">
+                <img src="https://via.placeholder.com/300" alt="Feature Image 1">
+                <img src="https://via.placeholder.com/300" alt="Feature Image 2">
+                <img src="https://via.placeholder.com/300" alt="Feature Image 3">
+            </div>
         </div>
     </section>
 
@@ -56,6 +77,35 @@
         </div>
     </footer>
 
-    <script src="js/main.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const images = document.querySelectorAll('.gallery img');
+            const navbar = document.getElementById('navbar');
+
+            const revealImages = () => {
+                images.forEach((img) => {
+                    const rect = img.getBoundingClientRect();
+                    if (rect.top < window.innerHeight - 50) {
+                        img.classList.add('visible');
+                    }
+                });
+            };
+
+            const handleScroll = () => {
+                if (window.scrollY > 50) {
+                    navbar.classList.add('scrolled');
+                } else {
+                    navbar.classList.remove('scrolled');
+                }
+            };
+
+            window.addEventListener('scroll', () => {
+                revealImages();
+                handleScroll();
+            });
+            revealImages(); // Check on load
+            handleScroll(); // Check navbar on load
+        });
+    </script>
 </body>
 </html>
