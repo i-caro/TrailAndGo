@@ -4,7 +4,6 @@ body {
     font-family: 'Poppins', sans-serif;
     line-height: 1.6;
     color: #333;
-    margin-top: 60px; /* To avoid content hiding behind the navbar */
 }
 
 .container {
