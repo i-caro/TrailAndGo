@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Trail & Go</title>
+        <link rel="stylesheet" href="style/styles.css">
+        <link rel="shortcut icon" href="images/LOGO TRAIL.png" type="image/x-icon">
+        <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+    </head>
+<body id="body_packages">
+    <!-- Navbar -->
+    <nav class="navbar" id="navbar">
+        <div class="container">
+            <a href="index.html">Home</a>
+            <a href="about.html">About Us</a>
+            <a href="packages.html">Travel Packages</a>
+            <a href="reviews.html">Reviews</a>
+            <a href="contact.html">More Information</a>
+        </div>
+    </nav>
+
+    <!-- Travel Packages Section -->
+    <main>
+        <section class="packages">
+            <div class="container">
+                <h1 id="travel">Travel Packages</h1>
+                <div class="packages-container">
+                    <!-- Simple Package -->
+                    <div class="card">
+                        <div class="card-side card-front">
+                            <img src="images/dos.jpeg" alt="Simple Package">
+                            <h3>Simple</h3>
+                            <p>$99</p>
+                        </div>
+                        <div class="card-side card-back">
+                            <p>Basic vehicle rental, one pre-planned route, and 24/7 assistance.</p>
+                        </div>
+                    </div>
+
+                    <!-- Advanced Package -->
+                    <div class="card">
+                        <div class="card-side card-front">
+                            <img src="images/cinco.jpeg" alt="Advanced Package">
+                            <h3>Advanced</h3>
+                            <p>$199</p>
+                        </div>
+                        <div class="card-side card-back">
+                            <p>Vehicle rental, personalized route planning, travel assistance, and basic tips for your trip.</p>
+                        </div>
+                    </div>
+
+                    <!-- Premium Package -->
+                    <div class="card">
+                        <div class="card-side card-front">
+                            <img src="images/uno.jpeg" alt="Premium Package">
+                            <h3>Premium</h3>
+                            <p>$299</p>
+                        </div>
+                        <div class="card-side card-back">
+                            <p>Luxury vehicle rental, fully personalized route planning, premium assistance, and exclusive travel tips.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const navbar = document.getElementById('navbar');
+
+            const handleScroll = () => {
+                if (window.scrollY > 50) {
+                    navbar.classList.add('scrolled');
+                } else {
+                    navbar.classList.remove('scrolled');
+                }
+            };
+
+            window.addEventListener('scroll', handleScroll);
+            handleScroll(); // Check navbar on load
+        });
+    </script>
+</body>
+</html>
