@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Trail & Go</title>
+        <link rel="stylesheet" href="style/styles.css">
+        <link rel="shortcut icon" href="images/LOGO TRAIL.png" type="image/x-icon">
+        <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+    </head>
+<body>
+    <!-- Navbar -->
+    <nav class="navbar" id="navbar">
+        <div class="container">
+            <a href="index.html">Home</a>
+            <a href="about.html">About Us</a>
+            <a href="packages.html">Trip Packs</a>
+            <a href="reviews.html">Reviews</a>
+            <a href="contact.html">More Information</a>
+        </div>
+    </nav>
+
+    <!-- Reseñas Section -->
+    <main>
+        <section class="reviews">
+            <div class="container">
+                <h1 id="reseñas">Reseñas de Nuestros Clientes</h1>
+                <div class="reviews-container">
+                    <div class="review-card">
+                        <div class="review-name">María López</div>
+                        <div class="stars">★★★★★</div>
+                        <p class="review-text">Un servicio increíble, el guía fue muy amable y los paisajes fueron espectaculares.</p>
+                    </div>
+                    <div class="review-card">
+                        <div class="review-name">Carlos Fernández</div>
+                        <div class="stars">★★★★☆</div>
+                        <p class="review-text">La experiencia fue buena, pero la planificación pudo haber sido mejor.</p>
+                    </div>
+                    <div class="review-card">
+                        <div class="review-name">Ana García</div>
+                        <div class="stars">★★★★★</div>
+                        <p class="review-text">Todo estuvo perfecto, volveré a reservar con ellos sin duda.</p>
+                    </div>
+                    <div class="review-card">
+                        <div class="review-name">Luis Martínez</div>
+                        <div class="stars">★★★☆☆</div>
+                        <p class="review-text">Me gustó, pero tuve algunos inconvenientes con el transporte.</p>
+                    </div>
+                    <div class="review-card">
+                        <div class="review-name">Iván Caro</div>
+                        <div class="stars">★★★★★</div>
+                        <p class="review-text">Una experiencia inolvidable, gracias al equipo por su gran trabajo.</p>
+                    </div>
+                    <div class="review-card">
+                        <div class="review-name">Francisco Miguel Castro</div>
+                        <div class="stars">★★★★☆</div>
+                        <p class="review-text">Gran servicio, pero el guía un poco borde.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const navbar = document.getElementById('navbar');
+
+            const handleScroll = () => {
+                if (window.scrollY > 50) {
+                    navbar.classList.add('scrolled');
+                } else {
+                    navbar.classList.remove('scrolled');
+                }
+            };
+
+            window.addEventListener('scroll', handleScroll);
+            handleScroll(); // Check navbar on load
+        });
+    </script>
+</body>
+</html>
